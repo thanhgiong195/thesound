@@ -9,8 +9,9 @@
   },
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --open",
-    "build": "webpack --config webpack.prod.js",
-    "deploy": "gh-pages -d dist"
+		"build": "webpack --config webpack.prod.js",
+		"predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build"
   },
   "keywords": [],
   "author": "",
@@ -54,5 +55,6 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0"
-  }
+	},
+	"homepage": "https://thanhgiong195.github.io/thesound"
 }
